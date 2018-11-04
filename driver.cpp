@@ -99,22 +99,22 @@ int main ()
 	int expressionCount = expressionVector.size();
 	cout<<"LinkedStack Postfix Expression Evaluation: "<<endl;
 	for (int i = 0; i < expressionCount; i++)
-	{
+	{ //testing LinkedStack on file
 		postFixEvaluate(expressionVector[i], new LinkedStack<int>);
 	}
 	cout<<"\nArrayStack Postfix Expression Evaluation: "<<endl;
 	for (int i = 0; i < expressionCount; i++)
-	{
+	{ //testing ArrayStack on file
 		postFixEvaluate(expressionVector[i], new ArrayStack<int>);
 	}
 	cout<<"\nManual Entry:\n";
 	while (true)
-	{
+	{ //loop for user input Postfix Expressions
 		string userInput = " ";
 		cout<<"Enter a Postfix Expression (i.e. 2 3 4 + * ) or \"q\" to quit:\n";
 		getline(cin, userInput);
 		if (userInput == "q")
-		{
+		{ //sentinel exit value
 			cout<<"Thank you, goodbye!";
 			return 0;
 		}
